@@ -13,15 +13,15 @@ services:
         volumes:
             - /root/Desktop/postgire:/var/lib/postgresql/data
 
-#    bookpostgres:
-#        image: javenockdocker/book-postgres
-#        container_name: bookpostgres
-#        pull_policy: always
-#        ports:
-#            - "8094:8094"
-#        restart: always
-#        environment:
-#            - spring.datasource.url=jdbc:postgresql://postgres:5432/postgres
-#        depends_on:
-#            - postgres
+    bookpostgres:
+        image: postgresimage
+        container_name: bookpostgres
+        pull_policy: always
+        ports:
+            - "8094:8094"
+        restart: always
+        environment:
+            - spring.datasource.url=jdbc:postgresql://postgres:5432/postgres
+        depends_on:
+            - postgres
 
