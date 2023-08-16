@@ -1,0 +1,27 @@
+version: "3.8"
+
+services:
+    postgres:
+        image: postgres:14-alpine
+        container_name: postgres
+        restart: always
+        ports:
+            - "5432:5432"
+        environment:
+            - POSTGRES_PASSWORD=19pool90
+            - POSTGRES_USER=postgres
+        volumes:
+            - /root/Desktop/postgire:/var/lib/postgresql/data
+
+#    bookpostgres:
+#        image: javenockdocker/book-postgres
+#        container_name: bookpostgres
+#        pull_policy: always
+#        ports:
+#            - "8094:8094"
+#        restart: always
+#        environment:
+#            - spring.datasource.url=jdbc:postgresql://postgres:5432/postgres
+#        depends_on:
+#            - postgres
+
